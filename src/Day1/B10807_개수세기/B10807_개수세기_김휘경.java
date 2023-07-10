@@ -24,7 +24,7 @@ public class B10807_개수세기_김휘경 {
         String s = sc.nextLine();
         int v = Integer.parseInt(sc.nextLine());
          */
-        
+
 
         int count = 0;
 
