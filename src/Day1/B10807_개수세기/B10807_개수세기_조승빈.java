@@ -1,4 +1,4 @@
-package Day1.B11659_구간합구하기4;
+package Day1.B10807_개수세기;
 
 import java.io.BufferedReader;
 import java.io.IOException;
