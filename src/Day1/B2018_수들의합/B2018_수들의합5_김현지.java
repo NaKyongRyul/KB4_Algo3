@@ -3,7 +3,7 @@ package Day1.B2018_수들의합;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class pre_B2018_수들의합5_김현지 {
+public class B2018_수들의합5_김현지 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
