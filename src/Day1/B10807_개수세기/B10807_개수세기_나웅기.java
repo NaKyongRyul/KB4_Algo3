@@ -1,7 +1,6 @@
 package Day1.B10807_개수세기;
 
 import java.util.Scanner;
-import java.util.Arrays;
 
 public class B10807_개수세기_나웅기 {
 	public static void main(String[] args) {
