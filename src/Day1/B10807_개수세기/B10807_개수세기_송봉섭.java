@@ -9,9 +9,7 @@ public class B10807_개수세기_송봉섭 {
         int N = Integer.parseInt(reader.readLine());
 
         String str = reader.readLine();
-        String [] strings = str.split(" "); // String 배열로나옴
-        //System.out.println(Arrays.toString(strings));
-        //System.out.println(strings[0]);
+        String [] strings = str.split(" "); 
 
         int[] arr = new int[N];
         for (int i = 0; i < N; i++) {
