@@ -267,4 +267,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/intellij,eclipse,macos,windows,java
+# End of https://www.toptal.com/developers/gitignore/api/intellij,eclipse,macos,windows,java.idea\
+KB4_Algo3.iml
