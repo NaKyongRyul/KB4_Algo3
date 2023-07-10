@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 
 public class B11659_구간합구하기4_김현지 {
 
-	public static void main(String[] args) throws NumberFormatException, IOException {
+	public static void main(String[] args) throws IOException {
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 		
 		// M, N
@@ -20,29 +20,38 @@ public class B11659_구간합구하기4_김현지 {
 		String [] numberString = number.split(" ");
 		
 		int [] arr = new int [N];
-		for (int i=0; i<numberString.length; i++) {
+		int len = numberString.length;
+		for (int i=0; i<len; i++) {
 			arr[i] = Integer.parseInt(numberString[i]);
 		}
 		
+		// 구간 합 배열 생성
+		int [] sum = new int[len];
+		sum[0] = arr[0];
+		for (int i=1; i<len; i++) {
+			sum[i] = sum[i-1] + arr[i];
+		}
+		
 		// from to
-		int [][] arr2 = new int [M][2];
+		int [] answer = new int[M];
 		for (int j=0; j<M; j++) {
 			String fromTo = reader.readLine();
 			String [] fromTo1String = fromTo.split(" ");
-			arr2[j][0] = Integer.parseInt(fromTo1String[0]);
-			arr2[j][1] = Integer.parseInt(fromTo1String[1]);
-		}
-		
-		for (int j=0; j<M; j++) {
-			int sum = 0;
-			for (int k=arr2[j][0]-1; k<arr2[j][1]; k++) {
-				sum += Integer.parseInt(numberString[k]);
+			int from = Integer.parseInt(fromTo1String[0]);
+			int to = Integer.parseInt(fromTo1String[1]);
+			if (from == 1) {
+				answer[j] = sum[to-1];
+			} else {
+				answer[j] = sum[to-1] - sum[from-2];
 			}
-			System.out.println(sum);
+
 		}
-	
 		
+		for(int k=0; k<M; k++) {
+			System.out.println(answer[k]);
+		}
 		
+
 
 	}
 
