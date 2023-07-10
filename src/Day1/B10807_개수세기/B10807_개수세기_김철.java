@@ -1,8 +1,10 @@
 package Day1.B10807_개수세기;
 
-public class B10807_개수세기_Sol {
+public class B10807_개수세기_김철 {
 
 	public static void main(String[] args) {
-		// 주석 //
+		// TODO Auto-generated method stub
+
 	}
+
 }
