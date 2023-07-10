@@ -3,7 +3,7 @@ package Day1.B11659_구간합구하기4;
 import java.io.*;
 import java.util.*;
 
-public class B11659_구간합구하기_김철{
+public class B11659_구간합구하기4_김철{
     static int N, M;
     static int[] arr, S;
 
