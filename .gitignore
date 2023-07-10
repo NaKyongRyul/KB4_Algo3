@@ -1,10 +1,6 @@
 # Created by https://www.toptal.com/developers/gitignore/api/intellij,eclipse,macos,windows,java
 # Edit at https://www.toptal.com/developers/gitignore?templates=intellij,eclipse,macos,windows,java
 
-*.iml
-.idea
-.gitignore
-
 ### Eclipse ###
 .metadata
 bin/
@@ -271,4 +267,5 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/intellij,eclipse,macos,windows,java
+# End of https://www.toptal.com/developers/gitignore/api/intellij,eclipse,macos,windows,java.idea\
+KB4_Algo3.iml
