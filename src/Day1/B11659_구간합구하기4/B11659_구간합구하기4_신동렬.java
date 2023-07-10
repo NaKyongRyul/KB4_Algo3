@@ -18,8 +18,6 @@ public class BOJ_11659 {
         str = reader.readLine();//5 4 3 2 1
         String[] strs2 = str.split(" ");//['5','4','3','2','1']
         int[] arr = new int[a];//[0,0,0,0,0]
-        int [] result=new int[b];
-
         for (int i = 0; i < strs2.length; i++) {
             arr[i] = Integer.parseInt(strs2[i]);//[5,4,3,2,1]
         }
@@ -31,11 +29,10 @@ public class BOJ_11659 {
 
             int c = Integer.parseInt(strs3[0]);
             int d = Integer.parseInt(strs3[1]);
+            int result=0;
             for (int i=c-1; i<d;i++){
-                result[j]+=arr[i];
+                result+=arr[i];
             }
-
+            System.out.println(result);
         }
-        for (int i=0; i<b; i++)    {
-            System.out.println(result[i]);
-        }}}
+    }}
