@@ -33,5 +33,6 @@ public class B11659_구간합구하기_김철{
             bw.write(partSum + "\n");
         }
         bw.close();
+        
     }
 }
