@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Arrays;
 
-public class BOJ_11659 {
+public class B11659_구간합구하기4_신동렬 {
     public static void main(String[] args) throws IOException {
 //        //입력받기- BufferedReader
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));//system.in: 외부입력
