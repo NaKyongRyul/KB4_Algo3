@@ -13,14 +13,16 @@ public class B11659_구간합구하기4_나경률 {
 		StringBuilder sb = new StringBuilder();
 		
 		st = new StringTokenizer(br.readLine());
-		int N = Integer.parseInt(st.nextToken());
-		int count = Integer.parseInt(st.nextToken());
+		int N = Integer.parseInt(st.nextToken());//수의 개수 
+		int count = Integer.parseInt(st.nextToken());// 반복할 횟수 
 		
-		int[] arr = new int[N];
+		int[] arr = new int[N+1];
+		int[] sum = new int[N+1];
 		
 		st = new StringTokenizer(br.readLine());
-		for(int i=0; i<N; i++) {
+		for(int i=1; i<=N; i++) {
 			arr[i] = Integer.parseInt(st.nextToken());
+			sum[i] = sum[i-1] + arr[i]; 
 		}
 		
 		for(int i=0; i<count; i++) {
@@ -28,11 +30,8 @@ public class B11659_구간합구하기4_나경률 {
 			int from = Integer.parseInt(st.nextToken());
 			int to = Integer.parseInt(st.nextToken());
 			
-			int sum = 0;
-			for(int j=from-1; j<to; j++) {
-				sum += arr[j];
-			}
-			sb.append(sum + "\n");
+			int result = sum[to] - sum[from-1];
+			sb.append(result + "\n");
 		}
 		System.out.println(sb);
 	}
