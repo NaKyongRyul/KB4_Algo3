@@ -2,7 +2,7 @@ package Day1.B10807_개수세기;
 
 import java.util.Scanner;
 
-public class Main {
+public class B10807_개수세기_최예빈 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
