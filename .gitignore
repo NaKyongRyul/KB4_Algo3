@@ -120,6 +120,8 @@ cmake-build-*/
 *.iws
 
 # IntelliJ
+KB_IT_Academy_Algo.iml
+.idea/
 out/
 
 # mpeltonen/sbt-idea plugin
