@@ -4,32 +4,25 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class B10807_개수세기_오원식 {
+public class B10807_개수세기_장재은 {
 
 	public static void main(String[] args) throws NumberFormatException, IOException {
+		
 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-		int N = Integer.parseInt(reader.readLine());
+		int n = Integer.parseInt(reader.readLine());
 		
 		String str = reader.readLine();
-		String []  strs =  str.split(" ");
+		String [] strs = str.split(" ");
 		
-		int [] arr = new int[N];
-		
-		for(int i = 0; i < strs.length; i++) {
-			arr[i] = Integer.parseInt(strs[i]);
-		}
-		
-		str = reader.readLine();
-		int v = Integer.parseInt(str);
-		
+		String v = reader.readLine();
 		int cnt = 0;
 		
-		for(int i = 0; i<N; i++) {
-			if(arr[i] == v) {
-				cnt += 1;
+		for(String i:strs) {
+			if(i.equals(v)) {
+				cnt++;
 			}
 		}
-		
 		System.out.println(cnt);
 	}
+
 }
