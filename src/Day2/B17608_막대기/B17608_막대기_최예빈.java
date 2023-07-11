@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.io.BufferedReader;
 import java.util.Stack;
 
-public class B17609_막대기_최예빈 {
+public class B17608_막대기_최예빈 {
 
     static int N;
     static int highest, temp, count;
