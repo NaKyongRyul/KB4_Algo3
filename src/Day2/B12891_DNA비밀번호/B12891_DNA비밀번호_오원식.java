@@ -10,7 +10,7 @@ public class B12891_DNA비밀번호_오원식 {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
-
+		
 		String[] strs = bf.readLine().split(" ");
 		int	 S = Integer.parseInt(strs[0]);
 		int P = Integer.parseInt(strs[1]);
@@ -35,15 +35,15 @@ public class B12891_DNA비밀번호_오원식 {
 		
 		while(i<=S-P) {
 			if(i!=0) {
-			if(dnas[i-1].equals("A")) cntA--;
-			else if(dnas[i-1].equals("C")) cntC--;
-			else if(dnas[i-1].equals("G")) cntG--;
-			else if(dnas[i-1].equals("T")) cntT--;
-				
-			if(dnas[P+i-1].equals("A")) cntA++;
-			else if(dnas[P+i-1].equals("C")) cntC++;
-			else if(dnas[P+i-1].equals("G")) cntG++;
-			else if(dnas[P+i-1].equals("T")) cntT++;
+				if(dnas[i-1].equals("A")) cntA--;
+				else if(dnas[i-1].equals("C")) cntC--;
+				else if(dnas[i-1].equals("G")) cntG--;
+				else if(dnas[i-1].equals("T")) cntT--;
+					
+				if(dnas[P+i-1].equals("A")) cntA++;
+				else if(dnas[P+i-1].equals("C")) cntC++;
+				else if(dnas[P+i-1].equals("G")) cntG++;
+				else if(dnas[P+i-1].equals("T")) cntT++;
 			}
 			
 			if(cntA >= A && cntC >= C && cntG >= G && cntT >= T) 
