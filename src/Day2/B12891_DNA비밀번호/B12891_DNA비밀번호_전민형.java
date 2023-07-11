@@ -31,7 +31,6 @@ public class B12891_DNA비밀번호_전민형 {
 		str = reader.readLine();
 		com = str.split("");
 
-
 		str = reader.readLine();
 
 		String [] ranN = str.split(" ");
