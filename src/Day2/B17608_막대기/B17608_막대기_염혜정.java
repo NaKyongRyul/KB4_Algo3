@@ -1,4 +1,4 @@
-package day2;
+package Day2.B17608_막대기;
 
 import java.io.BufferedReader;
 import java.io.IOException;
