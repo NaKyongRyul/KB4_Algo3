@@ -1,84 +1,84 @@
-package Day1.B10807_°³¼ö¼¼±â;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.util.Arrays;
-import java.util.Scanner;
-
-public class B10807_°³¼ö¼¼±â_¹é¹Ì¼ö {
-
-	public static void main(String[] args) throws NumberFormatException, IOException {
-	
-		
-		//BufferedReader°¡ Scannerº¸´Ù ÀÐ¾î¿À´Â ½Ã°£ÀÇ ÈÎ¾À ºü¸£´Ù
-		
-		
-		/*BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-		
-		int N = Integer.parseInt(reader.readLine()); //intÇüÀ¸·Î º¯°æÇØÁÜ
-		System.out.println(N);
-		
-		String str = reader.readLine();
-		String[] strs = str.split(" ");//¹è¿­·Î ¸¸µé±â À§ÇØ
-		System.out.println(Arrays.toString(strs));
-		
-		int[] arr = new int [N];
-				
-		for(int i = 0; i<strs.length; i++) {
-			arr[i] = Integer.parseInt(strs[i]);
-		}
-		
-		System.out.println(Arrays.toString(arr));
-		
-		str  = reader.readLine();
-		int v = Integer.parseInt(str);
-		System.out.println(v);*/
-		
-		/////////////¹æ¹ý2
-		
-		/*Scanner sc = new Scanner(System.in);
-		
-		int N = sc.nextInt();
-		int [] arr = new int [N];
-		
-		for(int i =0; i<N; i++) {
-			arr[i] = sc.nextInt();
-		}
-		
-		int v = sc.nextInt();*/
-		
-		//¹®Á¦Ç®ÀÌ
-		
-		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-		
-		int N = Integer.parseInt(reader.readLine()); //intÇüÀ¸·Î º¯°æÇØÁÜ
-		//System.out.println(N);
-		
-		String str = reader.readLine();
-		String[] strs = str.split(" ");//¹è¿­·Î ¸¸µé±â À§ÇØ
-		//System.out.println(Arrays.toString(strs));
-		
-		int[] arr = new int [N];
-				
-		for(int i = 0; i<strs.length; i++) {
-			arr[i] = Integer.parseInt(strs[i]);
-		}
-		
-		//System.out.println(Arrays.toString(arr));
-		
-		str  = reader.readLine();
-		int v = Integer.parseInt(str);
-		//System.out.println(v);
-		
-		int count = 0;
-		
-		for(int i = 0; i< arr.length; i++) {
-			if(arr[i]==v) {
-				++count;
-			}
-		}
-		System.out.println(count);
-	}
-}
-	
+//package Day1.B10807_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½;
+//
+//import java.io.BufferedReader;
+//import java.io.IOException;
+//import java.io.InputStreamReader;
+//import java.util.Arrays;
+//import java.util.Scanner;
+//
+//public class B10807_ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½_ï¿½ï¿½Ì¼ï¿½ {
+//
+//	public static void main(String[] args) throws NumberFormatException, IOException {
+//
+//
+//		//BufferedReaderï¿½ï¿½ Scannerï¿½ï¿½ï¿½ï¿½ ï¿½Ð¾ï¿½ï¿½ï¿½ï¿½ ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½Î¾ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//
+//
+//		/*BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+//
+//		int N = Integer.parseInt(reader.readLine()); //intï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//		System.out.println(N);
+//
+//		String str = reader.readLine();
+//		String[] strs = str.split(" ");//ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+//		System.out.println(Arrays.toString(strs));
+//
+//		int[] arr = new int [N];
+//
+//		for(int i = 0; i<strs.length; i++) {
+//			arr[i] = Integer.parseInt(strs[i]);
+//		}
+//
+//		System.out.println(Arrays.toString(arr));
+//
+//		str  = reader.readLine();
+//		int v = Integer.parseInt(str);
+//		System.out.println(v);*/
+//
+//		/////////////ï¿½ï¿½ï¿½2
+//
+//		/*Scanner sc = new Scanner(System.in);
+//
+//		int N = sc.nextInt();
+//		int [] arr = new int [N];
+//
+//		for(int i =0; i<N; i++) {
+//			arr[i] = sc.nextInt();
+//		}
+//
+//		int v = sc.nextInt();*/
+//
+//		//ï¿½ï¿½ï¿½ï¿½Ç®ï¿½ï¿½
+//
+//		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+//
+//		int N = Integer.parseInt(reader.readLine()); //intï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//		//System.out.println(N);
+//
+//		String str = reader.readLine();
+//		String[] strs = str.split(" ");//ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+//		//System.out.println(Arrays.toString(strs));
+//
+//		int[] arr = new int [N];
+//
+//		for(int i = 0; i<strs.length; i++) {
+//			arr[i] = Integer.parseInt(strs[i]);
+//		}
+//
+//		//System.out.println(Arrays.toString(arr));
+//
+//		str  = reader.readLine();
+//		int v = Integer.parseInt(str);
+//		//System.out.println(v);
+//
+//		int count = 0;
+//
+//		for(int i = 0; i< arr.length; i++) {
+//			if(arr[i]==v) {
+//				++count;
+//			}
+//		}
+//		System.out.println(count);
+//	}
+//}
+//

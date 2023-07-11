@@ -52,7 +52,29 @@ public class B12891_DNA비밀번호_김현지 {
 				numC -= 1;
 			} else if (dnaChrArr[i-1] == 'G') {
 				numG -= 1;
-			} else if (dnaChrArr[i-1] == 'T') {
+				switch (c) {
+					case 'A':
+						myArr[0]--;
+						if (myArr[0] == checkArr[0])
+							check--;
+						break;
+					case 'C':
+						myArr[1]--;
+						if (myArr[1] == checkArr[1])
+							check--;
+						break;
+					case 'G':
+						myArr[2]--;
+						if (myArr[2] == checkArr[2])
+							check--;
+						break;
+
+					case 'T':
+						myArr[3]--;
+						if (myArr[3] == checkArr[3])
+							check--;
+						break;
+				}			} else if (dnaChrArr[i-1] == 'T') {
 				numT -= 1;
 			}
 			// 부분 배열의 마지막 요소
