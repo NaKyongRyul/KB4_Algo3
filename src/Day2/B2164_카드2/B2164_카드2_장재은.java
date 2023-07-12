@@ -19,4 +19,3 @@ public class B2164_카드2_장재은 {
 		sc.close();
 	}
 }
-
