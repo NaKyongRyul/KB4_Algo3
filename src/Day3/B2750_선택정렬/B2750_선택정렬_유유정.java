@@ -15,10 +15,9 @@ public class B2750_선택정렬_유유정 {
 	public static void selectsort(int []arr) {
 		for(int i=0;i<arr.length;i++) {
 			int minNum =i;
-			for(int j=minNum;j<arr.length;j++) {
+			for(int j=i+1;j<arr.length;j++) {
 				if(arr[minNum]>arr[j])
 					minNum = j;
-					
 			}
 			swap(arr,i,minNum);
 		}
