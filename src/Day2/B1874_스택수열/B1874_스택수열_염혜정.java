@@ -1,4 +1,4 @@
-package day2;
+package Day2.B1874_스택수열;
 
 import java.io.BufferedReader;
 import java.io.IOException;
