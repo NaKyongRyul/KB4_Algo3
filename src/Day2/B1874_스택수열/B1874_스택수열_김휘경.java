@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
- 
+
 /**
  * 계속 push하다가 같으면 pop
  * 보다 크면 push
