@@ -11,15 +11,14 @@ public class B2164_카드2_유유정 {
 		Queue <Integer> queue1 = new LinkedList<>();
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
 		int N = Integer.parseInt(bf.readLine());
-		int answer=0;
+		int answer=1;
 		for(int i=1;i<N+1;i++) {
 			queue1.add(i);
 		}
 		while(queue1.size()!=1) {
 			queue1.remove();
 			int ele = queue1.remove();
-			queue1.add(ele);
-			
+			queue1.add(ele);	
 		}
 		System.out.println(queue1.peek());
 	}
