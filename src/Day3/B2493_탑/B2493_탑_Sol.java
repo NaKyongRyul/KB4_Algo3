@@ -18,10 +18,9 @@ public class B2493_탑_Sol {
 		Stack <Integer> stack = new Stack <>();
 
 		for(int i=0; i<N; i++) {
-			int now = arr[i]; 
-			while(!stack.isEmpty() && arr[stack.peek()] < now) {
-				System.out.println(arr[stack.peek()]);
-				stack.pop();
+			int now = arr[i];//now = 6 -> 9
+			while(!stack.isEmpty() && arr[stack.peek()] < now) {//arr[0] < 9
+				stack.pop();//0
 			}
 			if(!stack.isEmpty()) ans[i] = stack.peek() + 1;
 			stack.push(i);//stack = 0
