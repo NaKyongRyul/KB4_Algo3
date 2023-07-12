@@ -1,4 +1,4 @@
-package Day3.B2750_버블정렬;
+package day3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -21,9 +21,9 @@ public class B2750_버블정렬_염혜정 {
         br.close();
 
         // 버블정렬
-        for(int i = 0; i<arr.length; i++){
-            for(int k = 0; k<i; k++){
-                if(arr[i]<arr[k]) change(arr, i, k);
+        for(int i = 0; i<N-1; i++){
+            for(int k = 0; k<N-i-1; k++){
+                if(arr[k]>arr[k+1]) change(arr, k, k+1);
             }
         }
 
