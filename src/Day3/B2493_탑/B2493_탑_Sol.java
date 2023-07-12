@@ -27,6 +27,5 @@ public class B2493_탑_Sol {
 		}
 
 		for(int i=0; i<N; i++) System.out.print(ans[i] + " ");	
-
 	}
 }
