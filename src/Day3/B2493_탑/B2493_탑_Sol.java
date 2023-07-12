@@ -18,12 +18,13 @@ public class B2493_탑_Sol {
 		Stack <Integer> stack = new Stack <>();
 
 		for(int i=0; i<N; i++) {
-			int now = arr[i];
+			int now = arr[i]; 
 			while(!stack.isEmpty() && arr[stack.peek()] < now) {
+				System.out.println(arr[stack.peek()]);
 				stack.pop();
 			}
 			if(!stack.isEmpty()) ans[i] = stack.peek() + 1;
-			stack.push(i);	
+			stack.push(i);//stack = 0
 		}
 
 		for(int i=0; i<N; i++) System.out.print(ans[i] + " ");	
