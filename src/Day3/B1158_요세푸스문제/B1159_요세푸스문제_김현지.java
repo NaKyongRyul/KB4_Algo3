@@ -1,4 +1,4 @@
-package Day3.B1159_요세푸스문제;
+package Day3.B1158_요세푸스문제;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
