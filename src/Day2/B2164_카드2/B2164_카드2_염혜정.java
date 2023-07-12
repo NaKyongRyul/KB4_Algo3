@@ -1,4 +1,4 @@
-package day2;
+package Day2.B2164_카드2;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
