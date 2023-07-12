@@ -8,7 +8,7 @@ import java.util.Stack;
 
 
 
-public class B2493_탑_김휘경 {  
+public class B2493_탑_김휘경 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
