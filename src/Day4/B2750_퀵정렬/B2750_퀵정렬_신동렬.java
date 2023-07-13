@@ -28,7 +28,7 @@ public class B2750_퀵정렬_신동렬 {
                 while(j>=l+1 && pivot<arr[j]) j--;
                 while(i<=r &&pivot>arr[i]) i++;
                 if( i<=j){
-                    swap(arr, i++, j--);
+                    swap(arr, i, j);
                 }else break;
             }
 
