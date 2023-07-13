@@ -27,7 +27,7 @@ public class B2493_탑_김현지 {
 		
 		StringTokenizer tokenizer = new StringTokenizer(reader.readLine());
 
-		int [] answer = new int [N+1];
+		int [] answer = new int [N];
 		int [] tower = new int [N];
 
 		// 타워의 높이 배열에 추가
