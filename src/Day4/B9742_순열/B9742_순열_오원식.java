@@ -7,36 +7,37 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class B9742_순열_오원식 {
-	
+
 	static ArrayList<StringBuilder> answer = new ArrayList<>();
 	static String[] arr;
 	static int N;
 	static int R;
 	static int[] select;
 	static boolean[] isSelected;
-	
-public static void permutation(int r) {
-		
+
+	public static void permutation(int r) {
+
 		// 종료조건
-		if(r == R) {
+		if (r == R) {
 			StringBuilder sb = new StringBuilder();
-			for(int i = 0; i<select.length; i++)
+			for (int i = 0; i < select.length; i++)
 				sb.append(arr[select[i]]);
 			answer.add(sb);
 			return;
 		}
-		
+
 		// 재귀확장
-		for(int i=0; i<arr.length; i++) {
+		for (int i = 0; i < arr.length; i++) {
 
 			// 선택한 경우 = skip
-			if(isSelected[i] == true) continue;
-			
+			if (isSelected[i] == true)
+				continue;
+
 			// 선택
 			select[r] = i;
 			isSelected[i] = true;
-			permutation(r+1); 
-			
+			permutation(r + 1);
+
 			// 선택 해제
 			isSelected[i] = false;
 		}
@@ -44,43 +45,41 @@ public static void permutation(int r) {
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
-		
-		while(true) {
+
+		while (true) {
 			String s = br.readLine();
-			
-			if(s == null)
+
+			if (s == null)
 				break;
-			
-			String [] str = s.split(" ");
-			
+
+			String[] str = s.split(" ");
+
 			arr = str[0].split("");
 			int n = Integer.parseInt(str[1]);
-			
+
 			N = arr.length;
 			R = arr.length;
-			
-			select = new int [R];
-			isSelected = new boolean [N];
-			
+
+			select = new int[R];
+			isSelected = new boolean[N];
+
 			permutation(0);
-			StringBuilder sb = new StringBuilder();
 			
+			StringBuilder sb = new StringBuilder();
 			sb.append(str[0]).append(" ");
 			sb.append(n).append(" = ");
 			
-			if(answer.size() > n-1) {
-				sb.append(answer.get(n-1));
+			if (answer.size() > n - 1) {
+				sb.append(answer.get(n - 1));
 				System.out.println(sb);
-			}
-			else {
+			} else {
 				sb.append("No permutation");
 				System.out.println(sb);
 			}
-				
+
 			answer.clear();
 		}
-		
+
 	}
 
 }
