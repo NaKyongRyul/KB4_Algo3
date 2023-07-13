@@ -1,4 +1,4 @@
-package com.itskb.codingtest.day08;
+package Day4.B2750_퀵정렬;
 
 import java.io.BufferedReader;
 import java.io.IOException;
