@@ -37,10 +37,10 @@ public class B2750_퀵정렬_김철 {
         // r는 왼쪽으로.. 이동하다가
         // 교차되는 시점에서 반복문 종료
         while(l <= r){
-            // arr[l]이 arr[pivot]보다 큰 값을 만날 때까지 l++
+            // arr[l]이 arr[pivot]보다 큰 값이 될 때까지 l++
             while((l <= right) && (arr[l] <= arr[pivot]))
                 l++;
-            // arr[r]이 arr[pivot]보다 작은 값을 만날 때까지 r--
+            // arr[r]이 arr[pivot]보다 작은 값이 될 때까지 r--
             while((r >= left+1) && (arr[r] >= arr[pivot]))
                 r--;
 
