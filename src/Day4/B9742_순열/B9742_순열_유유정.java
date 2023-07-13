@@ -13,9 +13,10 @@ public class B9742_순열_유유정 {
 	static boolean [] isSelected ;
 	static String answer;
 	static int count;
+	static StringBuffer sb = new StringBuffer();
 	public static void permutation(int r,int n) {
+		
 		if(r == R) {
-			StringBuffer sb = new StringBuffer();
 			for(int i=0;i<R;i++) {
 				sb.append(arr[selected[i]]);
 			}
@@ -24,7 +25,7 @@ public class B9742_순열_유유정 {
 				answer = sb.toString();
 				
 			}
-				
+			sb.setLength(0);
 			return;
 		}
 		for(int i=0;i<N;i++) {
@@ -65,5 +66,6 @@ public class B9742_순열_유유정 {
 		}
 
 	}
+
 
 }
