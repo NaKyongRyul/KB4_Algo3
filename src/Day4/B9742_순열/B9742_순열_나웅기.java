@@ -12,7 +12,7 @@ public class B9742_순열_나웅기 {
 	static int cnt;
 	static int [] result;
 	static boolean isP;
-	
+	// 11
 	static void permutation(int r, String s) {
 
 		if (r == N) {
@@ -21,8 +21,8 @@ public class B9742_순열_나웅기 {
 
 				for (int i = 0; i<selected.length; i++) {
 					result[i] = selected[i];
-					isP = true;
 				}
+				isP = true;
 				
 				
 			}
