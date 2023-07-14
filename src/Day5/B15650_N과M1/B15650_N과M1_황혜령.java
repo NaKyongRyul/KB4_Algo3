@@ -1,8 +1,8 @@
-package Day5.B15650_N과M2;
+package Day5.B15650_N과M1;
 
 import java.util.Scanner;
 
-public class B15650_N과M2_황혜령 {
+public class B15650_N과M1_황혜령 {
 	static int n, m;
 	static int[] select;
 	static boolean[] isSelected;
