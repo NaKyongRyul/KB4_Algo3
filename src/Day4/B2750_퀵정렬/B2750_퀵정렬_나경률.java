@@ -3,7 +3,6 @@ package Day4.B2750_퀵정렬;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class B2750_퀵정렬_나경률 {
 	static int N;
@@ -55,10 +54,8 @@ public class B2750_퀵정렬_나경률 {
 		}
 		return right;
 	}
-	
-	
-	public static void main(String[] args) throws IOException {
 		
+	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
 		
