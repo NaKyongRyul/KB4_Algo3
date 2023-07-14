@@ -1,35 +1,30 @@
 package Day5.B15650_N과M1;
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class B15650_N과M1_정지원 {
-	static Flavor[] arr;
+	
+	static int[] arr;
 	static int N;
+	static int R;
 	
-	static Flavor[] select;
+	static int[] select;
 	static boolean[] isSelected;
-	static int min;
 	
-	public static void combination(int idx, int size, int r) {
-		if(size==r) {
-			int sour=1;
-			int bitter=0;
-			for(int i=0;i<r;i++) {
-				sour *=select[i].sour;
-				bitter += select[i].bitter;
-			};
-			if(min>Math.abs(sour -bitter)){
-				min = Math.abs(sour-bitter);
-			}
+	public static void combination(int idx, int size) {
+		if(size==R) {
+			for(int i=0;i<R;i++)System.out.print(select[i] + " ");
+			System.out.println();
 			return;
 		}
 		for(int i=idx;i<N;i++) {
 			if(isSelected[i])continue;
 			isSelected[i] = true;
 			select[size] = arr[i];
-			combination(i, size+1, r);
+			combination(i, size+1);
 			
 			isSelected[i] = false;
 		}
@@ -40,34 +35,18 @@ public class B15650_N과M1_정지원 {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		N = Integer.parseInt(br.readLine());
-		min = 1000;
+		String str = br.readLine();
+		N = Integer.parseInt(str.split(" ")[0]);
+		R = Integer.parseInt(str.split(" ")[1]);
 		
-		arr = new Flavor[N];
-		for(int i=0;i<N;i++) {
-			String str = br.readLine();
-			arr[i] = new Flavor(Integer.parseInt(str.split(" ")[0]), Integer.parseInt(str.split(" ")[1]));
+		arr = new int[N];
+		for(int i=1;i<=N;i++) {
+			arr[i-1] = i;
 		}
 		
-		
+		select = new int[R];
 		isSelected = new boolean[N];
 		
-		
-		for(int i = 1;i<=N;i++) {
-			select = new Flavor[i];
-			combination(0, 0, i);
-		}
-		
-		System.out.println(min);
-	}
-}
-
-
-class Flavor{
-	int sour;
-	int bitter;
-	Flavor(int s, int b){
-		sour = s;
-		bitter = b;
+		combination(0, 0);
 	}
 }
