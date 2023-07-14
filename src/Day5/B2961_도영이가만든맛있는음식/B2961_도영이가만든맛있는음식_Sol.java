@@ -34,6 +34,8 @@ public class B2961_도영이가만든맛있는음식_Sol {
 		
 		// 종료조건
 		if(idx == N) {
+			
+			// 재료가 없는 경우 = skip
 			if(!check_withIngredient()) return;
 			
 //			System.out.print("재료 : ");
@@ -83,5 +85,6 @@ public class B2961_도영이가만든맛있는음식_Sol {
 		// 모든 경우의 수 (부분집합 탐색)
 		Search(0);
 		
+		System.out.println(ans);
 	}
 }
