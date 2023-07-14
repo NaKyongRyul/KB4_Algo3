@@ -1,10 +1,10 @@
-package Day5.B15650_N과M1;
+package Day5.B2961_도영이가만든맛있는음식;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class B15650_N과M1_정지원 {
+public class B2961_도영이가만든맛있는음식_정지원 {
 	static Flavor[] arr;
 	static int N;
 	
@@ -20,8 +20,8 @@ public class B15650_N과M1_정지원 {
 				sour *=select[i].sour;
 				bitter += select[i].bitter;
 			};
-			if(min>Math.abs(sour -bitter)){
-				min = Math.abs(sour-bitter);
+			if(min>Math.abs(bitter -sour)){
+				min = Math.abs(bitter-sour);
 			}
 			return;
 		}
@@ -41,7 +41,7 @@ public class B15650_N과M1_정지원 {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
 		N = Integer.parseInt(br.readLine());
-		min = 1000;
+		min = 10000000;
 		
 		arr = new Flavor[N];
 		for(int i=0;i<N;i++) {
@@ -61,7 +61,6 @@ public class B15650_N과M1_정지원 {
 		System.out.println(min);
 	}
 }
-
 
 class Flavor{
 	int sour;
