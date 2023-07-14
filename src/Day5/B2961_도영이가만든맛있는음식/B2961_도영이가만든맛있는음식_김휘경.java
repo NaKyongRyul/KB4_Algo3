@@ -1,14 +1,13 @@
 package Day5.B2961_도영이가만든맛있는음식;
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
+import static java.lang.Math.abs;
 import static java.lang.Math.min;
- 
 
 /**
  * 신맛 - 곱
@@ -22,7 +21,6 @@ public class B2961_도영이가만든맛있는음식_김휘경 {
     static int[] arr;
     static int[] arr1;
     static int[] arr2;
-    static List<Integer> arr3;
     static boolean[] isSelected; // 마킹배열
     static int n;
     static int minus;
@@ -43,6 +41,7 @@ public class B2961_도영이가만든맛있는음식_김휘경 {
                     result.add(arr[i]); // 부분집합 하나
                 }
             }
+
             if(result.size() != 0) {
                 int total1 = 1;
                 int total2 = 0;
@@ -52,17 +51,19 @@ public class B2961_도영이가만든맛있는음식_김휘경 {
                     total1 *= arr1[idx - 1]; // 신맛
                     total2 += arr2[idx - 1]; // 쓴맛
                 }
+                minus = min(minus, abs(total1 - total2));
 
-                if (total1 > total2) {
-                    minus = min(minus, total1 - total2);
-                } else {
-                    minus = min(minus, total2 - total1);
-                }
             }
 
-            t.add(minus);
+            if(t.size() > 0){
+                if(t.get(t.size()-1) > minus) {
+                    t.add(minus);
+                }
+            }else{
+                t.add(minus);
+            }
+
             Collections.sort(t);
-            arr3.add(t.get(0));
 
             return;
 
@@ -91,7 +92,6 @@ public class B2961_도영이가만든맛있는음식_김휘경 {
         arr = new int[n];
         arr1 = new int[n];
         arr2 = new int[n];
-        arr3 = new ArrayList<>();
 
         for(int i = 0; i < n; i++){
             // 신맛 쓴맛
@@ -113,8 +113,7 @@ public class B2961_도영이가만든맛있는음식_김휘경 {
 
         subset(0); // 부분집합으로 값 처리
 
-        Collections.sort(arr3);
-        System.out.println(arr3.get(0)); // 가장 작은 값
+        System.out.println(t.get(0)); // 가장 작은 값
 
 
     }
