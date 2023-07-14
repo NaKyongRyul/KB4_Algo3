@@ -15,7 +15,7 @@ public class B15650_N과M1_오원식 {
 		if(size == M) {
 			StringBuilder sb = new StringBuilder();
 			for(int i=0; i<M; i++) 
-				sb.append(select[i]+1).append(" ");
+				sb.append(select[i] + 1).append(" ");
 			System.out.println(sb);
 			return;
 		}
