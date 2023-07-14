@@ -1,55 +1,55 @@
 package Day5.B15650_N과M1;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class B15650_N과M_김대현 {
 
-	// static 변수 //
-	static char [] arr;
-	static int N;		// 문자열 개수
-	static int R;		// 선택개수
+	static int[] arr;
+	static int select[] ;
+	static int N;
+	static int M;
+	static boolean isSelect[];
 	
-	static int [] select;	// 선택저장변수
-	static boolean [] isSelected;	// 마킹배열
 	
-	public static void combination(int idx , int r) {
+	public static void combination(int index, int r) {
+		if(r==M)
+		{
+			for(int i = 0; i<M; i++)
+			System.out.print(arr[select[i]] +" ");
 		
-		// 종료조건
-		if(r == R) {
-			for(int i=0; i<R; i++) {
-				System.out.print(arr[select[i]]); 
-				System.out.print(" ");
-			}
-			System.out.println();
+			System.out.println(" ");
 			return;
 		}
 		
-		// 재귀확장
-		for(int i=idx; i<N; i++) {
-			
-			if(isSelected[i]) continue;
-			
-			isSelected[i] = true;
-			select[r] = i;
-			combination(i,r + 1);
-			
-			isSelected[i] = false;
-			
-		}
 		
+		for(int i = index; i<N; i++) {
+			
+			if(isSelect[i]) continue;
+			select[r] = i;
+			isSelect[i] = true;
+			combination(i,r+1);
+			isSelect[i] = false;
+		}
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		String str[] = br.readLine().split(" ");
+		N = Integer.parseInt(str[0]);
+		M = Integer.parseInt(str[1]);
+		arr = new int[N];
+		for(int i = 0 ;i<N; i++) {
+			arr[i] = i+1;
+		}
+		isSelect = new boolean[N];
+		select = new int[M];
 		
-		// 초기화 //
-		arr = new char [] {'1' , '2' , '3' , '4'};
-		N = arr.length;
-		R = 2;
-		select = new int [R];
-		isSelected = new boolean [N];
-
-		// 조합 실행 //
 		combination(0,0);
 		
 		
+
 	}
-	
-	
+
 }
