@@ -16,8 +16,7 @@ public class B9742_순열_전종한 {
 		if(r == arr.length) {
 			seq ++;
 			if(seq == R) {
-				sb.append(" = ");
-				for(int i=0; i<select.length; i++) sb.append(arr[select[i]]);
+				for(int i=0; i<select.length; i++) sb.append(" = " + arr[select[i]]);
 			}
 			return ;
 		}
