@@ -10,7 +10,7 @@ public class B9742_순열_백미수 {
 	static int M; //뽑은 수
 	static int[] arr; //뽑은 수열
 	
-	static int[] select; //선택된 arr인덱스
+	static int[] select; //선택된 arr인덱스를 배열에 넣어줌
 	static boolean[] isSelected;//선택된 수 뽑지 않도록 마킹
 	
 	private static void combination(int idx, int size) {
