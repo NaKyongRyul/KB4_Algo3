@@ -11,14 +11,13 @@ public class B9742_순열_오원식 {
 	static ArrayList<StringBuilder> answer = new ArrayList<>();
 	static String[] arr;
 	static int N;
-	static int R;
 	static int[] select;
 	static boolean[] isSelected;
 
 	public static void permutation(int r) {
 
 		// 종료조건
-		if (r == R) {
+		if (r == N) {
 			StringBuilder sb = new StringBuilder();
 			for (int i = 0; i < select.length; i++)
 				sb.append(arr[select[i]]);
@@ -58,10 +57,9 @@ public class B9742_순열_오원식 {
 			int n = Integer.parseInt(str[1]);
 
 			N = arr.length;
-			R = arr.length;
 
-			select = new int[R];
-			isSelected = new boolean[N];
+			select = new int[N];
+			isSelected = new boolean[arr.length];
 
 			permutation(0);
 			
