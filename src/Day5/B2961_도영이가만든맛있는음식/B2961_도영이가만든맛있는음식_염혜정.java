@@ -46,7 +46,7 @@ public class B2961_도영이가만든맛있는음식_염혜정 {
         s = 1;
         b = 0;
         isSelected = new boolean[N];
-        min = -1;
+        min = -1; // min = Integer.MAX_VALUE 활용하면 좋음
         res = 0;
 
         for(int i = 0; i<N; i++){
