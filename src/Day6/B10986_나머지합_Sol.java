@@ -35,21 +35,22 @@ public class B10986_나머지합_Sol {
 			else S[i] = S[i-1] + arr[i];
 		}
 		
-		System.out.println("구간합 배열 : " + Arrays.toString(S));
+		//System.out.println("구간합 배열 : " + Arrays.toString(S));
 		
 		// SM 배열
 		for(int i=0; i<S.length; i++) {
 			S[i] = S[i]%M;
 		}
 
-		System.out.println("구간합%M 배열 : " + Arrays.toString(S));
+		//System.out.println("구간합%M 배열 : " + Arrays.toString(S));
 		
 		long [] count = new long [M];
 		
 		for(int i=0; i<N; i++) {
 			count[(int) S[i]] = count[ (int) S[i]] + 1;
 		}
-		System.out.println("count 배열 : " + Arrays.toString(count));
+		
+		//System.out.println("count 배열 : " + Arrays.toString(count));
 		
 		long ans = 0;
 		
