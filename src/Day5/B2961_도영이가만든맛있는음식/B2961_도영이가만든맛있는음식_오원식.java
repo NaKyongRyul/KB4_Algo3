@@ -9,7 +9,7 @@ public class B2961_도영이가만든맛있는음식_오원식 {
 
 	// static 변수 //
 
-	static ArrayList <StringBuilder>temp = new ArrayList<>();
+//	static ArrayList <StringBuilder>temp = new ArrayList<>();
 	static int[] select; // 선택저장변수
 	static boolean[] isSelected; // 마킹배열
 	static int min = 1000000000;
@@ -29,9 +29,11 @@ public class B2961_도영이가만든맛있는음식_오원식 {
 					bitter += B[select[i]];
 				}
 				
-				if(sour>=bitter) d = sour-bitter;
-				else d = bitter-sour;
-			
+//				if(sour>=bitter) d = sour-bitter;
+//				else d = bitter-sour;
+				
+				d = (sour > bitter) ? sour - bitter : bitter - sour;
+				
 				if(min>d) min = d;
 				return;
 			}
