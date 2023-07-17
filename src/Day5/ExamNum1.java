@@ -2,7 +2,7 @@ package Exam;
 
 import java.util.Scanner;
 
-public class Num1 {
+public class ExamN {
 	
 	static void swap(int [] arr , int i , int j ) {
 		int temp = arr[i];
