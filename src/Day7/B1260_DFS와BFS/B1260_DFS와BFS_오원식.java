@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Queue;
 import java.util.Stack;
@@ -23,14 +22,14 @@ public class B1260_DFS와BFS_오원식 {
 		graph[u].add(v);
 	}
 
-	public static void DFS(int nowNum) {
-		isVisited[nowNum] = true;
-		System.out.print(nowNum + " ");
-		for (int i : graph[nowNum]) {
-			if (isVisited[i] == false)
-				DFS(i);
-		}
-	}
+//	public static void DFS(int nowNum) {
+//		isVisited[nowNum] = true;
+//		System.out.print(nowNum + " ");
+//		for (int i : graph[nowNum]) {
+//			if (isVisited[i] == false)
+//				DFS(i);
+//		}
+//	}
 
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -58,29 +57,36 @@ public class B1260_DFS와BFS_오원식 {
 			Collections.sort(graph[i]);
 		}
 
-//		System.out.println(Arrays.toString(graph));
 //		isVisited = new boolean[N + 1];
 //		DFS(V);
 
+		for (int i = 0; i < graph.length; i++) {
+			Collections.sort(graph[i], Collections.reverseOrder());
+		}
+
 		Stack<Integer> stack = new Stack<>();
 		isVisited = new boolean[N + 1];
-		isVisited[V] = true;
 		stack.push(V);
 
 		while (!stack.isEmpty()) {
 			node = stack.pop();
+			if (isVisited[node] == true)
+				continue;
+
+			isVisited[node] = true;
 			System.out.print(node + " ");
 
-			for (int i : graph[node]) {
-				if (isVisited[i] == false) {
-					isVisited[i] = true;
-					stack.push(i);
-				}
-			}
+			for (int i : graph[node])
+				stack.push(i);
+
 		}
-		
+
 		System.out.println();
 		
+		for (int i = 0; i < graph.length; i++) {
+			Collections.sort(graph[i]);
+		}
+
 		Queue<Integer> que = new ArrayDeque<>();
 		isVisited = new boolean[N + 1];
 		isVisited[V] = true;
@@ -89,7 +95,7 @@ public class B1260_DFS와BFS_오원식 {
 		while (!que.isEmpty()) {
 			node = que.poll();
 			System.out.print(node + " ");
-			
+
 			for (int i : graph[node]) {
 				if (isVisited[i] == false) {
 					isVisited[i] = true;
