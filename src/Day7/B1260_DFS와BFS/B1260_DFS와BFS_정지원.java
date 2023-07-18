@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class B1260_DFS와BFS {
+public class B1260_DFS와BFS_정지원 {
 	static ArrayList<Integer>[] graph;
 	static boolean[] isVisited;
 	static ArrayDeque<Integer> queue = new ArrayDeque<>();
