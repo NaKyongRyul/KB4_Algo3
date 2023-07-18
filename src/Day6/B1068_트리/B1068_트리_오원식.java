@@ -54,10 +54,6 @@ public class B1068_트리_오원식 {
 		//System.out.println(Arrays.toString(tree));
 		System.out.println(res);
 		
-		
-			
-			
-
 	}
 
 }
