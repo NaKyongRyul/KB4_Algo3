@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 
-public class B11725_트리부모찾기_김휘경 {
+public class B11725_트리의부모찾기_김휘경 {
 
     static int N;
     static boolean[] isVisted;
