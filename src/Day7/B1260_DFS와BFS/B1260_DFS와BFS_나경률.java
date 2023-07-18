@@ -67,6 +67,7 @@ public class B1260_DFS와BFS_나경률 {
 			arr[y].add(x);
 		}
 		
+		//정렬해서 작은값부터 방문조건 성립 
 		for(int i=0; i<=N; i++) {
 			Collections.sort(arr[i]);
 		}
