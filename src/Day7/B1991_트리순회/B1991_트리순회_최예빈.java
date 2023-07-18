@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 public class B1991_트리순회_최예빈 {
 
-    static int A = 65;
+    static final int A = 65;
     static int N;
     static int[][] tree;
 
