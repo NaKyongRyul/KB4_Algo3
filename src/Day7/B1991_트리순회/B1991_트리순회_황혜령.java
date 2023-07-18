@@ -25,14 +25,8 @@ public class B1991_트리순회_황혜령 {
 			char[] tmp = input.toCharArray(); //띄어쓰기 포함
 
 			int node = tmp[0] - 'A';
-			if(tmp[2] == '.')
-				tree[node].add(-1);
-			else
-				tree[node].add(tmp[2] - 'A');
-			if(tmp[4] == '.')
-				tree[node].add(-1);
-			else
-				tree[node].add(tmp[4] - 'A');
+			tree[node].add(tmp[2] - 'A');
+			tree[node].add(tmp[4] - 'A');
 		}
 
 		dfs(0);
@@ -43,7 +37,7 @@ public class B1991_트리순회_황혜령 {
 	}
 
 	static void dfs(int cur) {
-		if(cur == -1) return;
+		if(cur < 0) return;
 
 		preorder.append((char)(cur + 'A'));
 		dfs(tree[cur].get(0));//left
