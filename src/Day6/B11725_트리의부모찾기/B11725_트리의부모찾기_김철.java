@@ -42,15 +42,15 @@ public class B11725_트리의부모찾기_김철 {
 		bw.close();
 	}
 	
-	static void DFS(int nowIndex) {
-		visited[nowIndex] = true;
+	static void DFS(int nowNode) {
+		visited[nowNode] = true;
 		
-		for(int i : arrList[nowIndex]) {
-			if(visited[i]) continue;
+		for(int nextNode : arrList[nowNode]) {
+			if(visited[nextNode]) continue;
 			
 //			if(parents[i] != 0) continue;	// 있어도 없어도 됨
-			parents[i] = nowIndex;
-			DFS(i);
+			parents[nextNode] = nowNode;
+			DFS(nextNode);
 		}
 	}
 }
