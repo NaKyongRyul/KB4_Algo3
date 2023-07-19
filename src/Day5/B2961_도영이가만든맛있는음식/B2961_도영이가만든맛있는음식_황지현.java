@@ -27,8 +27,7 @@ public class B2961_도영이가만든맛있는음식_황지현 {
 			}
 			
 		}
-//		System.out.println(s_taste);
-//		System.out.println(b_taste);
+
 		if(b_taste!=0)ans.add(Math.abs(s_taste-b_taste));
 		return;
 		}
@@ -56,5 +55,6 @@ public class B2961_도영이가만든맛있는음식_황지현 {
 			R++;
 		}
 		System.out.println(Collections.min(ans));
+		// sort(arr,Collections.reverseOrder())하면 역으로 정렬
 	}
 }

@@ -5,12 +5,6 @@ import java.util.Scanner;
 
 public class B2750_버블정렬_Sol {
 	
-	static void swap(int [] arr , int i , int j ) {
-		int temp = arr[i];
-		arr[i] = arr[j];
-		arr[j] = temp;
-	}
-	
 	static void bubbleSort(int [] arr) {
 		
 		// 내부 구현 //
@@ -35,5 +29,11 @@ public class B2750_버블정렬_Sol {
 		
 		for(int i=0; i<N; i++) System.out.println(arr[i]);
 
+	}
+	
+	static void swap(int [] arr , int i , int j ) {
+		int temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;
 	}
 }

@@ -17,6 +17,8 @@ public class B1260_DFS와BFS_나웅기 {
 	static boolean [] visited1;
 	static Stack<Integer> stack;
 	static Queue<Integer> que;
+	static StringBuilder ans;
+	
 	public static void dfs(int x) {
 		if (visited1[x] == false) {
 			stack.add(x);			
@@ -26,7 +28,7 @@ public class B1260_DFS와BFS_나웅기 {
 		if (stack.isEmpty()) return;
 		
 		int num = stack.pop();
-		System.out.print(num + " ");
+		ans.append(num+" ");
 		for (int i = 0; i<arr[num].size(); i++) {
 			dfs(arr[num].get(i));
 			}		
@@ -39,7 +41,7 @@ public class B1260_DFS와BFS_나웅기 {
 		
 		while (!que.isEmpty()) {
 			int num = que.poll();
-			System.out.print(num + " ");
+			ans.append(num+" ");
 			for (int i = 0; i<arr[num].size(); i++) {
 				if (visited1[arr[num].get(i)] == true) {
 					continue;
@@ -83,10 +85,13 @@ public class B1260_DFS와BFS_나웅기 {
 		visited1 = new boolean [n+1];
 		stack = new Stack<>();
 		que = new ArrayDeque<>();
+		ans = new StringBuilder();
 		dfs(v);
+		System.out.println(ans);
 		visited1 = new boolean [n+1];
-		System.out.println();
+		ans = new StringBuilder();
 		bfs(v);
+		System.out.println(ans);
 		
 	}
 }
