@@ -7,7 +7,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
- 
+
 public class B2178_미로탐색_김휘경 {
 
     static boolean[][] isVisited;
@@ -37,7 +37,7 @@ public class B2178_미로탐색_김휘경 {
         }
     }
 
-    static void bfs(int x, int y){ // 최단거리 구하가ㅣ
+    static void bfs(int x, int y){ // 최단거리 구하기
         Queue<Node> queue = new LinkedList<>();
         queue.offer(new Node(x, y));
         isVisited[x][y] = true;
