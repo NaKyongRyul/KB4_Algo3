@@ -1,4 +1,4 @@
-package Day8.B13023_ABCDE;
+ package Day8.B13023_ABCDE;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -41,7 +41,7 @@ public class B13023_ABCDE_나경률 {
 	}
 	
 	static void dfs(int now, int count) {
-		if(count >= 5) {
+		if(count >= 5 || ans == 1) {
 			ans = 1;
 			return;
 		}
