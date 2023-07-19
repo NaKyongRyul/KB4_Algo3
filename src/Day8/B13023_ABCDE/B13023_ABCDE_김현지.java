@@ -20,7 +20,6 @@ public class B13023_ABCDE_김현지 {
 	public static void dfs(int nowNode) {
 		if (cnt == 4) {
 			answer = 1;
-			// 여기서 return했을 때 dfs를 빠져낭지 않는 이유: dfs(nextNode)위치로 빠져나오기 때문인 것 같아서 위치 옮김
 			return;
 		}
 //		System.out.println("nowNode: " + nowNode + ", cnt: " + cnt);
@@ -32,11 +31,7 @@ public class B13023_ABCDE_김현지 {
 			cnt++;
 			visited[nextNode] = true;
 			dfs(nextNode); 
-			if (cnt == 4) {
-			answer = 1;
-			// 여기로 옮김
-			return;
-		}
+
 			// 백트래킹
 //			System.out.println("count-- 수행, backNode: " + nextNode);
 			visited[nextNode] = false;
