@@ -64,7 +64,7 @@ public class B11724_연결요소의개수_김휘경 {
         for(int i = 1; i <=N; i++){
             if(!isVisited[i]){
                 dfs(i);
-                count++; 
+                count++;
             }
         }
 
