@@ -42,17 +42,15 @@ public class B2178_미로탐색_Sol {
 				// 다음 좌표
 				int next_x = now[0] + dx[i];
 				int next_y = now[1] + dy[i];
-
-				
-				// 2. 배열의 인덱스가 유효하지 않은 경우 = x < 0 | x > M | y < 0 | y > N 
-				if(next_x < 0 || next_x >= M || next_y <0 || next_y>=N) continue;
-				
 				
 				// 1. 이동할수 없는 칸 = maze[y][x] == 0 인 경우
 				if(maze[next_y][next_x] == 0 ) continue;
 				
+				// 2. 배열의 인덱스가 유효하지 않은 경우 = x < 0 | x > M | y < 0 | y > N 
+				if(next_x < 0 || next_x >= M || next_y <0 || next_y>=N) continue;
+				
 				// 3. 이미 방문한 경우 = dist[y][x] != 0 
-				if(dist[next_y][next_x] != 0) continue;
+				if(dist[next_y][next_x] == 0) continue;
 				
 				dist[next_y][next_x] = dist[now[1]][now[0]] + 1;
 				que.add(new int [] {next_x , next_y});
