@@ -43,7 +43,7 @@ public class B9663_N_Queen_김휘경 {
                 dfs(depth+1); // 재귀
             }
         }
- 
+
 
     }
 

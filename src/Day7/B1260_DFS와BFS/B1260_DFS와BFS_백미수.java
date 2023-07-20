@@ -98,6 +98,7 @@ public class B1260_DFS와BFS_백미수 {
 			
 		}
 		
+		//문제에서 작은애를 먼저 탐색하라고 했기 때문에 정렬
 		for(int i=1; i<N+1; i++) {
 			Collections.sort(graph[i]);
 		}
@@ -115,8 +116,6 @@ public class B1260_DFS와BFS_백미수 {
 		isVisited[V] = true;
 		
 		DFS2(V);
-		
-		System.out.println();
 		
 		//BFS
 		isVisited = new boolean[N+1];
