@@ -36,7 +36,7 @@ public class B11047_동전0_김휘경 {
                 count += tmpCount;
                 K -= tmpCount * values[idx];
             }
-            idx -= 1; 
+            idx -= 1;
         }
 
         System.out.println(count);
