@@ -13,7 +13,6 @@ public class B2839_설탕배달_김휘경 {
 
         int N = Integer.parseInt(br.readLine());
 
-        int sum = 0;
         int count = 0;
         boolean check = false;
 
