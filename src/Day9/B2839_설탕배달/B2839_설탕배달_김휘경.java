@@ -21,7 +21,7 @@ public class B2839_설탕배달_김휘경 {
             if(N == 0){
                 check = true;
                 break;
-            } 
+            }
 
             if(N % 5 == 0){
                 count += N / 5;
@@ -35,7 +35,7 @@ public class B2839_설탕배달_김휘경 {
         }
 
 
-        if(check != true){
+        if(!check){
             System.out.println(-1);
 
         }else{
