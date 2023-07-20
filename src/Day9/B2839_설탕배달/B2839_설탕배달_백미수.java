@@ -28,12 +28,12 @@ public class B2839_설탕배달_백미수 {
 				ans = ans + 1;
 				sum = sum - 1*5;
 				Count(sum);
-			}else{
+			}else{//5로 나눠져도 3의 배수로 나눠 안 떨어질 수 있음
 				ans = ans + 1;
 				sum = sum - 1*3;
 				Count(sum);
 			}
-		}else{
+		}else{//5로 안 나눠져도 3으로 나눠질 수 있음
 			ans = ans + 1;
 			sum = sum - 1*3;
 			Count(sum);
