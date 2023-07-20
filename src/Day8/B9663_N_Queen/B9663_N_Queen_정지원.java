@@ -12,7 +12,7 @@ public class B9663_N_Queen_정지원 {
 		for(int i=0;i<y;i++) {
 			if(board[i][x]==1) {
 				return false;
-			}h
+			}
 			else if((x-(i+1))>=0 && board[y-i-1][x-(i+1)]==1) {
 				return false;
 			}
