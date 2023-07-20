@@ -21,13 +21,10 @@ public class B1931_회의실배정_Sol {
 			arr[i][0] = Integer.parseInt(token.nextToken()); 
 			arr[i][1] = Integer.parseInt(token.nextToken()); 
 		}
-		
-		System.out.println(Arrays.deepToString(arr));
-		
+			
 		// 람다식 => Comparator 표현
 		Arrays.sort(arr ,  (a,b) -> ( a[1] != b[1] ? a[1] - b[1] : a[0] - b[0]));
-		System.out.println(Arrays.deepToString(arr));
-		
+	
 		int nowTime = 0;
 		int cnt = 0;
 		
