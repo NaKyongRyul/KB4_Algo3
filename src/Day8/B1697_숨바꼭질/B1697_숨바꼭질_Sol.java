@@ -63,7 +63,11 @@ public class B1697_숨바꼭질_Sol {
 		time[N] = 0;
 
 		while(!que.isEmpty()) {
+<<<<<<< HEAD
 			System.out.println(Arrays.toString(Arrays.copyOf(time, 10)));
+=======
+//			System.out.println(Arrays.toString(Arrays.copyOf(time, 10)));
+>>>>>>> 4dcbe1c1477d9771d26381e922dce68f6d0303e4
 			int now = que.poll();
 			if(now == K) return;
 			
@@ -95,7 +99,11 @@ public class B1697_숨바꼭질_Sol {
 		N = sc.nextInt();
 		K = sc.nextInt();
 
+<<<<<<< HEAD
 		searchBFS2();
+=======
+		searchBFS();
+>>>>>>> 4dcbe1c1477d9771d26381e922dce68f6d0303e4
 		
 		System.out.println(time[K]);
 
