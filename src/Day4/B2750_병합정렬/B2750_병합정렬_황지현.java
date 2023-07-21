@@ -32,7 +32,7 @@ public class B2750_병합정렬_황지현 {
 			}
 		}
 		for(int i=0;i<=right;i++) {
-			arr[i]=tmp[i]
+			arr[i]=tmp[i];
 		}
 
 	}

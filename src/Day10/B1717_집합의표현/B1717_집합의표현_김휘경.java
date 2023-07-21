@@ -10,17 +10,18 @@ public class B1717_집합의표현_김휘경 {
 
     static int[] parent;
 
-    static void union(int a, int b){ 
+    static void union(int a, int b){
         // 부모 찾기
         a = find(a);
         b = find(b);
 
         if(a != b){ // 부모가 다른 경우
-            if(a <= b){
+            if(a < b){
                 parent[b] =a;
             }else{
                 parent[a] = b;
             }
+
         }
 
     }
@@ -28,7 +29,7 @@ public class B1717_집합의표현_김휘경 {
         if(parent[num] == num){ // 루트 노드인 경우
             return num;
         }
-        return find(parent[num]); // 부모찾아서 리턴
+        return parent[num] = find(parent[num]); // 부모찾아서 리턴 -> 여기서 시간초과 문제 해결함
 
     }
 
@@ -37,6 +38,7 @@ public class B1717_집합의표현_김휘경 {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String input = br.readLine();
         StringTokenizer st = new StringTokenizer(input);
+        StringBuilder sb = new StringBuilder();
 
         int n  = Integer.parseInt(st.nextToken());
         int m  = Integer.parseInt(st.nextToken());
@@ -61,21 +63,22 @@ public class B1717_집합의표현_김휘경 {
                 union(a, b);
 
             }else if (state == 1){
-                // 같은 집합에 포함되어있는 지 확인
 
-                a= find(a);
-                b = find(b);
-
-                if(a == b){ // 부모 같은 경우
-                    System.out.println("YES");
+                if(find(a) == find(b)){ // 부모 같은 경우
+                    sb.append("YES").append("\n");
+                    //System.out.println("YES");
                 }else{
-                    System.out.println("NO");
+                    sb.append("NO").append("\n");
+                    //System.out.println("NO");
                 }
-
             }
-
 
         }
 
+        // 한번에 출력
+        System.out.println(sb);
+
     }
 }
+
+
