@@ -75,7 +75,7 @@ public class B1920_수찾기_김휘경 {
 
             binarySearch(target); // 직접 구현
             //binarySearchAPI(target); // API사용
- 
+
         }
 
     }
