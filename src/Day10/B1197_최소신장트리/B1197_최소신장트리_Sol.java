@@ -25,7 +25,6 @@ class Edge {
 	
 }
 
-
 public class B1197_최소신장트리_Sol {
 
 	static int [] parent;
