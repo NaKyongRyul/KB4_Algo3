@@ -1,11 +1,11 @@
-package Day10.B1916_여행가자;
+package Day10.B1976_여행가자;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
-public class B1916_여행가자_황혜령 {
+public class B1976_여행가자_황혜령 {
 	static int n, m;
 	static int[] graph;
 
