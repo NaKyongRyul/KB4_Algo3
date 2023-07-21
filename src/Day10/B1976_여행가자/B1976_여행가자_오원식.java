@@ -3,7 +3,6 @@ package Day10.B1976_여행가자;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Arrays;
 
 public class B1976_여행가자_오원식 {
 	
@@ -38,13 +37,11 @@ public class B1976_여행가자_오원식 {
 		for(int i = 1; i <N+1; i++) {
 			parent[i] = i;
 		}
-		
-		//System.out.println(Arrays.toString(parent));
-		
+
 		for(int i = 1; i<N+1; i++) {
 			String [] s = br.readLine().split(" ");
 			for(int j = 1; j<N+1; j++) {
-				if(s[0].equals("1")){
+				if(s[j-1].equals("1")){
 					union(i, j);	
 				}
 			}
